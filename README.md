@@ -87,3 +87,61 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h3>Step 4: Install osTicket v1.15.8</h3>
      
+- Download osTicket (download from within lab files: [link](https://drive.google.com/drive/u/0/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6))
+- Right-click on the file and select Extract All
+	- Open the new osTicket folder
+		- Copy the Upload folder into C:\inetpub\wwwroot
+		- Rename “Upload” to “osTicket”
+
+
+<p align="center">
+<img src="https://i.imgur.com/BpL8IJE.png" height="80%" width="80%" alt="Azure Free Account"/> <img src="https://i.imgur.com/xSJD7yk.png" height="80%" width="80%" alt="Azure Free Services"/>
+</p>
+ 
+     
+
+<h3>Step 5: Restart the IIS Server
+</h3>
+
+- Search for Internet Information Services (IIS) and select Open
+	- Select Restart on the right-hand side 
+- On the left side of the screen, select Virtualmachine > Sites > Default Website > osTicket
+- On the right side of the screen, click “Browse *:80”
+	- This should open osTicket in your web browser
+- Before continuing, head back to IIS
+- Open IIS
+
+
+<p align="center">
+<img src="https://i.imgur.com/OpBkwwj.png" height="80%" width="80%" alt="Azure Free Account"/> <img src="https://i.imgur.com/XNVSNia.png" height="80%" width="80%" alt="Azure Free Services"/>
+</p>
+
+<h3>Step 6: Enable Extensions in IIS
+</h3>
+
+- Go back to IIS > Sites > Default Web Site > osTicket
+- Double-click PHP Manager
+- Click “Enable or Disable an Extension” at the bottom of the screen under PHP Extensions
+- Right-click and enable the following
+    - php_imap.dll (Might be already enabled)
+    - php_intl.dll
+    - php_opcache.dll
+
+ 
+     
+ <p align="center">
+<img src="https://i.imgur.com/GQfPOU8.png" height="80%" width="80%" alt="Azure Free Account"/> <img src="https://i.imgur.com/iCK6vst.png" height="80%" width="80%" alt="Azure Free Services"/>
+</p>
+
+<h3>Step 7: Refresh the osTicket Site in Your Browser
+</h3>
+
+- Refresh the osTicket site adn observe the change
+	- Intl Extension should now have a green checkmark next to it
+
+
+<p align="center">
+<img src="https://i.imgur.com/ByfN2Fd.png" height="80%" width="80%" alt="Azure Free Account"/>
+
+
+
